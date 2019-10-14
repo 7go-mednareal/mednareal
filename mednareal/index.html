@@ -7,6 +7,7 @@
     <meta name="keywords" content="" />
     <meta name="author" content="7Go" />
     <title>Jalecando</title>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -83,13 +84,13 @@
                 <h4>Fique por dentro!</h4>
                 <p>Cadastre-se para receber nossas novidades e conteúdos exclusivos!</p>
                 <div class="form-item">
-                    <input type="text" placeholder="Nome" id="nome"/>
+                    <input type="text" placeholder="Nome" id="nomeId" required="required"/>
                 </div>
                 <div class="form-item">
-                   <input type="email" placeholder="Email" id="email"/>
+                    <input type="email" placeholder="Email" id="emailId" required="required"/>
                 </div>
                 <div class="botão">
-                    <button type="submit">Enviar</button>
+                    <button type="submit" onclick="Enviar()">Enviar</button>
                 </div>
 
             </form>
@@ -97,28 +98,6 @@
 
     </div>
 
+</body>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
-
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyBwQcJfOCd3tgXzmbukHrAZ2a9LeXEnPxQ",
-            authDomain: "teste-c03ae.firebaseapp.com",
-            databaseURL: "https://teste-c03ae.firebaseio.com",
-            projectId: "teste-c03ae",
-            storageBucket: "teste-c03ae.appspot.com",
-            messagingSenderId: "383349914377",
-            appId: "1:383349914377:web:849e6ed029eb7f18e431d8",
-            measurementId: "G-W0854CPFLG"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-    </script>
-</body></html>
+</html>
