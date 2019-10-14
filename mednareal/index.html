@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="7Go" />
+    <title>Jalecando</title>
+</head>
+
+<body>
+    <header class="menu-principal">
+        <main>
+            <div class="header-1">
+                <div class="logo">
+                    <img src="img/logo-mednareal-branco.png" />
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="#formulario">Inscreva-se</a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </header>
+
+    <main class="col-100">
+        <div class="header-2">
+            <div class="titulo1">
+                <p><b>Conteúdos para alguém assim</b></p>
+            </div>
+            <div class="busca">
+                <input placeholder="Pesquisa" type="text">
+            </div>
+
+        </div>
+    </main>
+
+
+    <div class="col-100 bloco-imagens-texto">
+        <div class="content" style="margin-left: 12%; float: left;">
+            <div class="col-3 bloco-texto bloco-imagem">
+                <img src="img/imagem1.png">
+                <p><b><a target="_blank" href="conteudo1.html">Lorem Ipsum is simply</a></b></p>
+                <p><a target="_blank" href="conteudo1.html">Lorem Ipsum is simply dummy text of the printing and typesetting of the
+                        industry. Lorem
+                        Ipsum has been
+                        the and scrambled it.
+                        atype specimen
+                    </a></p>
+            </div>
+            <div class="col-3 bloco-texto bloco-imagem">
+                <img src="img/imagem2.png">
+                <p><b><a target="_blank" href="conteudo2.html">Lorem Ipsum is simply</a></b></p>
+                <p><a target="_blank" href="conteudo2.html">Lorem Ipsum is simply dummy text of the printing and typesetting of the
+                        industry. Lorem
+                        Ipsum has been
+                        the and scrambled it.
+                        atype specimen
+                    </a></p>
+            </div>
+            <div class="col-3 bloco-texto bloco-imagem">
+                <img src="img/imagem3.png">
+                <p><b><a target="_blank" href="conteudo3.html">Lorem Ipsum is simply</a></b></p>
+                <p><a target="_blank" href="conteudo3.html">Lorem Ipsum is simply dummy text of the printing and typesetting of the
+                        industry. Lorem
+                        Ipsum has been
+                        the and scrambled it.
+                        atype specimen
+                    </a></p>
+            </div>
+
+        </div>
+    </div>
+    <a name="formulario" />
+    <div class="col-100 bloco-forms">
+        <div class="form">
+            <form action="" method="post">
+                <h4>Fique por dentro!</h4>
+                <p>Cadastre-se para receber nossas novidades e conteúdos exclusivos!</p>
+                <div class="form-item">
+                    <input type="text" placeholder="Nome" id="nome"/>
+                </div>
+                <div class="form-item">
+                   <input type="email" placeholder="Email" id="email"/>
+                </div>
+                <div class="botão">
+                    <button type="submit">Enviar</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBwQcJfOCd3tgXzmbukHrAZ2a9LeXEnPxQ",
+            authDomain: "teste-c03ae.firebaseapp.com",
+            databaseURL: "https://teste-c03ae.firebaseio.com",
+            projectId: "teste-c03ae",
+            storageBucket: "teste-c03ae.appspot.com",
+            messagingSenderId: "383349914377",
+            appId: "1:383349914377:web:849e6ed029eb7f18e431d8",
+            measurementId: "G-W0854CPFLG"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+</body></html>
