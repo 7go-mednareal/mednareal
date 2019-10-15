@@ -6,8 +6,8 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="7Go" />
+    <meta charset="utf-8" />
     <title>Jalecando</title>
-    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         <main>
             <div class="header-1">
                 <div class="logo">
-                    <img src="img/logo-mednareal-branco.png" />
+                    <img src="img/logo-jalecando-branco.png" />
                 </div>
                 <div class="menu">
                     <ul>
@@ -32,7 +32,7 @@
     <main class="col-100">
         <div class="header-2">
             <div class="titulo1">
-                <p><b>Conteúdos para alguém assim</b></p>
+                <p><b>Os conteúdos mais acessados:</b></p>
             </div>
             <div class="busca">
                 <input placeholder="Pesquisa" type="text">
@@ -47,7 +47,8 @@
             <div class="col-3 bloco-texto bloco-imagem">
                 <img src="img/imagem1.png">
                 <p><b><a target="_blank" href="conteudo1.html">Lorem Ipsum is simply</a></b></p>
-                <p><a target="_blank" href="conteudo1.html">Lorem Ipsum is simply dummy text of the printing and typesetting of the
+                <p><a target="_blank" href="conteudo1.html">Lorem Ipsum is simply dummy text of the printing and
+                        typesetting of the
                         industry. Lorem
                         Ipsum has been
                         the and scrambled it.
@@ -57,7 +58,8 @@
             <div class="col-3 bloco-texto bloco-imagem">
                 <img src="img/imagem2.png">
                 <p><b><a target="_blank" href="conteudo2.html">Lorem Ipsum is simply</a></b></p>
-                <p><a target="_blank" href="conteudo2.html">Lorem Ipsum is simply dummy text of the printing and typesetting of the
+                <p><a target="_blank" href="conteudo2.html">Lorem Ipsum is simply dummy text of the printing and
+                        typesetting of the
                         industry. Lorem
                         Ipsum has been
                         the and scrambled it.
@@ -67,7 +69,8 @@
             <div class="col-3 bloco-texto bloco-imagem">
                 <img src="img/imagem3.png">
                 <p><b><a target="_blank" href="conteudo3.html">Lorem Ipsum is simply</a></b></p>
-                <p><a target="_blank" href="conteudo3.html">Lorem Ipsum is simply dummy text of the printing and typesetting of the
+                <p><a target="_blank" href="conteudo3.html">Lorem Ipsum is simply dummy text of the printing and
+                        typesetting of the
                         industry. Lorem
                         Ipsum has been
                         the and scrambled it.
@@ -77,26 +80,31 @@
 
         </div>
     </div>
-    <a name="formulario" />
+    <a name="formulario"></a>
     <div class="col-100 bloco-forms">
-        <div class="form">
-            <form action="" method="post">
+        <div class="form" id="forms">
+            <form id="contactForm">
                 <h4>Fique por dentro!</h4>
                 <p>Cadastre-se para receber nossas novidades e conteúdos exclusivos!</p>
                 <div class="form-item">
-                    <input type="text" placeholder="Nome" id="nomeId" required="required"/>
+                    <input type="text" placeholder="Nome" id="nomeId" required="required" />
                 </div>
                 <div class="form-item">
-                    <input type="email" placeholder="Email" id="emailId" required="required"/>
+                    <input type="email" placeholder="Email" id="emailId" required="required" />
                 </div>
                 <div class="botão">
-                    <button type="submit" onclick="Enviar()">Enviar</button>
+                    <button type="submit">Enviar</button>
                 </div>
 
             </form>
         </div>
 
     </div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
