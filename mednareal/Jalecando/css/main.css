@@ -1,19 +1,19 @@
 /*RESET*/
 *{margin:0;padding: 0; font-size: 100%; box-sizing: border-box;font-family: sans-serif;}
 nav, ul{list-style: none; font-size: 30px;}
-a{text-decoration: none; cursor: pointer; opacity: 0.9;}
+a{color: inherit; text-decoration: none; cursor: pointer; opacity: 0.9;}
 a:hover{opacity: 1;}
 
 /*HEADER*/
-header{background-color: #209e8f; width: 100%; height: 72px; position: relative; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; padding: 20px 50px;}
+header{background-color: #209e8f; width: 100%; height: 72px; position: relative; top: 0; left: 0; display: flex; justify-content: space-around; align-items: center; padding: 20px 50px;}
 header img{width: 200px;}
-header nav{display: flex; color: white; font-size: 15px; }
+header nav{display: flex; color: white; font-size: 25px; }
 header li a{color: white;}
 header li{ margin: 0 15px;}
 header li:first-child{margin-left: 0;}
 header li:last-child{margin-right: 0;}
 @media(max-width:700px){
-    header{flex-direction: column; height: 140px;}
+    header{flex-direction: column; height: 100%; padding: 10px 25px;}
     header img{ margin-bottom: 15px;}
     header nav{margin-bottom: 15px;}
 }
@@ -22,27 +22,40 @@ header li:last-child{margin-right: 0;}
 .ig{width: 20px; height: 20px;}
 .fb{width: 10.8px; height: 20px; margin-left: 10px;}
 
+.pag-inicial{display: flex; flex-direction: column; width: 100%; height: 100%; align-items: center;}
 
 /*GRID*/
 /*DEFINE A AREA ONDE ESTARA O CONTEUDO*/
-.conteudo{display: flex;  flex-wrap: nowrap; padding: 50px 100px; justify-content: flex-start; width: 960; height: 900px;margin-left: 3vw;margin-bottom: 5vh;}
-.conteudo ul{width: 600px; height: 400px; flex-basis: 50%;}
-.conteudo ul li{display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end;background-repeat: no-repeat; width: 600px; height: 150px; margin-bottom: 25px; border: 1px solid black;}
-.conteudo h3{font-size: 20px; margin-bottom: 2px;}
-.conteudo p{max-width: 300px; font-size: 15px; margin-bottom: 5px;}
-.conteudo hr{width: 2px; height: 800px; background-color: #000000;margin: 0 50px;}
-.conteudo h2{font-size: 25px; text-align: center; margin-bottom: 20px;}
+.conteudo-inicial{display: flex;  flex-wrap: nowrap; padding: 50px 100px; justify-content: space-around; width: 100%; height: 900px;margin-left: 3vw;margin-bottom: 5vh; }
+.conteudo-inicial .lista-de-conteudo{width: 100%; height: 100%; flex: 2 2 200px;}
+.conteudo-inicial ul li{display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; background-repeat: no-repeat; width: 100%; height: 150px; margin-bottom: 25px; border: 1px solid black;}
+
+.conteudo-inicial .lista-de-conteudo h3{color: white;font-size: 20px; margin-bottom: 2px; }
+.conteudo-inicial .lista-de-conteudo p{background-color: white;max-width: 100%; font-size: 15px; }
+/*.texto-caixa-conteudo{background-color: white;}*/
+.conteudo-inicial hr{width: 2px; height: 100%; background-color: #000000;margin-left: 150px;}
+.conteudo-inicial h2{font-size: 25px; text-align: center; margin-bottom: 20px;}
+@media(min-width:1000px){
+    .conteudo-inicial ul li{width: 500px;}
+}
 
 
 /*SEÇAO DE MATERIAIS*/
-.conteudo .materiais{display: flex; flex-direction: column; flex-wrap: nowrap;}
-.conteudo .materiais h2{font-size: 25px; text-align: center; margin-bottom: 20px;}
+.conteudo-inicial .materiais{display: flex; width: 200px; height: 100%; flex-direction: column; align-items: flex-end; flex-wrap: nowrap;flex: 1 2 100px;}
+.conteudo-inicial .materiais h2{font-size: 25px; text-align: center; width: 100%; margin-bottom: 20px;}
 
 /*SECAO DE MATERIAIS GRATUITOS DENTRO DE MATERIAIS*/
-.conteudo .material-gratuito{ padding: 15px; width: 400px; height: 300px; display: flex; flex-direction: column; justify-content: center; align-items: center; border: none;}
-.conteudo .material-gratuito img{width: 130px; height: 155px;}
-.conteudo .material-gratuito p{width: 104px; height: 38px; font-family: OpenSans; font-size: 14px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: 1.36; letter-spacing: normal; text-align: center; color: #224655;}
-.conteudo .material-gratuito button {width: 129.5px; height: 33.5px; border-radius: 12.5px; background-color: #ea6f4b; font-size: 13px;}
+.conteudo-inicial .material-gratuito{ padding: 15px; width: 100%; height: 300px; display: flex; flex-direction: column; justify-content: center; align-items: center; border: none;}
+.conteudo-inicial .material-gratuito img{width: 130px; height: 155px;}
+.conteudo-inicial .material-gratuito p{width: 100%; height: 38px; font-family: OpenSans; font-size: 15px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: 1.36; letter-spacing: normal; text-align: center; color: #224655; margin: 5px 0;}
+.conteudo-inicial .material-gratuito button {width: 129.5px; height: 33.5px; border-radius: 12.5px; background-color: #ea6f4b; font-size: 13px;}
+@media(max-width:700px){
+    .conteudo-inicial{display: flex; flex-direction: column; align-items: center; width: 100%; height: 100%;padding: 0 0; margin: 10px 25px; }
+    .conteudo-inicial .lista-de-conteudo{width: 90%; align-items: center}
+    .conteudo-inicial hr{display: none}
+    .conteudo-inicial .materiais{display: flex; flex-direction: column; width: 100%; height: 100%; flex-wrap: wrap; align-content: center}
+    .conteudo-inicial .materiais h2{margin-bottom: 10px;}
+}
 
 /*LEADS*/
 .formulario{display: flex; flex-direction: column; align-items: center; padding: 50px 50px; background-color: #209e8f}
@@ -53,9 +66,8 @@ header li:last-child{margin-right: 0;}
 .formulario input{padding: 15px; border: 1px solid #ffff; border-radius: 4px; margin-right: 15px; flex: 1;}
 .formulario button{padding: 15px; background-color: #ffff; color: #209e8f; text-transform: uppercase; border:none;border-radius: 4px; cursor: pointer;}
 @media(max-width:700px){
-    .formulario input{flex-basis: 100%; margin-bottom: 15px;}
+    .formulario input{display: flex; flex-direction: column; flex-basis: 100%; margin-bottom: 15px;}
 }
-
 
 /*FOOTER*/
 
@@ -66,3 +78,21 @@ footer ul li:last-child{margin-right: 0;}
 footer ul li a{font-size: 2rem;}
 footer p{color: white; text-align: center;}
 footer img{width: 100px;}
+
+
+.container-conteudo{width: 100%;height: 100%;}
+.container-conteudo .imagem-cabecalho{display: flex; margin-left: 15vw; margin-bottom: 50px; padding: 0 0; width: 70% ; margin-top: -5px; flex-direction: column; align-items: center;justify-content: center;}
+.container-conteudo .imagem-cabecalho img{width: 900px;  height: 189.5px}
+
+.conteudo{display: flex; flex-direction: column; margin-left: 15vw; align-self: baseline; text-align: justify; width:  70%;}
+
+.conteudo h2{font-size: 2rem; margin-bottom: 15px; text-align: start; justify-content: center;}
+.conteudo h4{font-size: 1.6rem; margin-bottom: 20px; text-align: start;}
+.conteudo p1{font-size:  0.8rem; margin-bottom: 30px; text-align: start;}
+.conteudo p{font-size: 1.2rem; margin-bottom: 30px; text-align: justify;}
+.conteudo ul{font-size: 1.2rem; margin-top: -10px; margin-bottom: 30px; text-align: justify;}
+.conteudo ul li{font-size: 1.2rem; margin-left: 20px; margin-bottom: 2px; text-align: justify;}
+@media(max-width:700px){
+    .container-conteudo .imagem-cabecalho img{width: 100%;  height: 100px;}
+}
+
