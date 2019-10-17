@@ -22,13 +22,13 @@ header li:last-child{margin-right: 0;}
 .ig{width: 20px; height: 20px;}
 .fb{width: 10.8px; height: 20px; margin-left: 10px;}
 
-.pag-inicial{display: flex; flex-direction: column; width: 100%; height: 100%; align-items: center;}
+.pag-inicial{background-color: #f8f8f8; display: flex; flex-direction: column; width: 100%; height: 100%; align-items: center;}
 
 /*GRID*/
 /*DEFINE A AREA ONDE ESTARA O CONTEUDO*/
-.conteudo-inicial{display: flex;  flex-wrap: nowrap; padding: 50px 100px; justify-content: space-around; width: 100%; height: 900px;margin-left: 3vw;margin-bottom: 5vh; }
+.conteudo-inicial{;display: flex;  flex-wrap: nowrap; padding: 50px 100px; justify-content: space-around; width: 100%; height: 900px;margin-left: 3vw;margin-bottom: 5vh; }
 .conteudo-inicial .lista-de-conteudo{width: 100%; height: 100%; flex: 2 2 200px;}
-.conteudo-inicial ul li{display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; background-repeat: no-repeat; width: 100%; height: 150px; margin-bottom: 25px; border: 1px solid black;}
+.conteudo-inicial ul li{display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; background-repeat: no-repeat; width: 100%; height: 150px; margin: 12.5px; border: 1px solid black;}
 
 .conteudo-inicial .lista-de-conteudo h3{color: white;font-size: 20px; margin-bottom: 2px; }
 .conteudo-inicial .lista-de-conteudo p{background-color: white;max-width: 100%; font-size: 15px; }
@@ -80,16 +80,19 @@ footer p{color: white; text-align: center;}
 footer img{width: 100px;}
 
 
-.container-conteudo{width: 100%;height: 100%;}
+.container-conteudo{;width: 100%;height: 100%;background-color: #f8f8f8;}
 .container-conteudo .imagem-cabecalho{display: flex; margin-left: 15vw; margin-bottom: 50px; padding: 0 0; width: 70% ; margin-top: -5px; flex-direction: column; align-items: center;justify-content: center;}
 .container-conteudo .imagem-cabecalho img{width: 900px;  height: 189.5px}
 
 .conteudo{display: flex; flex-direction: column; margin-left: 15vw; align-self: baseline; text-align: justify; width:  70%;}
 
-.conteudo h2{font-size: 2rem; margin-bottom: 15px; text-align: start; justify-content: center;}
-.conteudo h4{font-size: 1.6rem; margin-bottom: 20px; text-align: start;}
+.conteudo h1{font-size: 2.5rem; margin-bottom: 15px; text-align: start; justify-content: center;}
+.conteudo h2{font-size: 2.0rem; margin-bottom: 15px; text-align: start; justify-content: center;}
+.conteudo h3{font-size: 1.8rem; margin-bottom: 15px; text-align: start; justify-content: center;}
+.conteudo h4{font-size: 1.6rem; margin-bottom: 15px; text-align: start; justify-content: center;}
+.conteudo h5{font-size: 1.4rem; margin-bottom: 15px; text-align: start; justify-content: center;}
 .conteudo p1{font-size:  0.8rem; margin-bottom: 30px; text-align: start;}
-.conteudo p{font-size: 1.2rem; margin-bottom: 30px; text-align: justify;}
+.conteudo p{font-size: 1.2rem; text-align: justify;}
 .conteudo ul{font-size: 1.2rem; margin-top: -10px; margin-bottom: 30px; text-align: justify;}
 .conteudo ul li{font-size: 1.2rem; margin-left: 20px; margin-bottom: 2px; text-align: justify;}
 @media(max-width:700px){
