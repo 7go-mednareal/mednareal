@@ -11,15 +11,30 @@ var config = {
 };
 
 firebase.initializeApp(config);
-// firebase.analytics();
 
-var leadsRef =firebase.database()
 
+var leadsRef = firebase.database()
+//ID FORMULARIOS
+var contactForm = 'contactForm'
+var downloadForm1 = 'downloadForm1'
+var downloadForm2 = 'downloadForm2'
+
+//ENDERECO DE ARQUIVOS
+var arqCV = 'https://firebasestorage.googleapis.com/v0/b/jalecando-7go.appspot.com/o/e-book-Curriculo-med.pdf?alt=media&token=ca45fcf1-c77d-4b61-9824-9a7e75b02288'
+var arqCM = 'https://firebasestorage.googleapis.com/v0/b/jalecando-7go.appspot.com/o/Guia_Completo_carreira_de_m%C3%A9dico.pdf?alt=media&token=a2396562-322c-4c81-adb1-9f47faa1b033'
+
+salvarDados(contactForm);
+
+downloadDados(downloadForm1, arqCV);
+
+downloadDados(downloadForm2, arqCM);
+
+//Processo de envio de informações ao Firebase
+function salvarDados(forms){
 let meuIP=getIp( function (meuIP) {
 
-
 window.addEventListener('load', function(){
-    let f = document.getElementById ('contactForm') 
+    let f = document.getElementById (forms) 
 
 
      function saveuser(name,email,date,tipo){
@@ -37,16 +52,15 @@ window.addEventListener('load', function(){
         
         .then(function(docRef) {
             
-            alert('Salvo Com Sucesso')
-            f.elements['name'].value ="";
-             f.elements['email'].value ="";
-             
-        })
+            if(alert('Salvo Com Sucesso')){
+            f.elements['nomeId'].value ="";
+             f.elements['emailId'].value ="";
+        }})
         .catch(function(error) {
             console.error("Error adding document: ", error);
         });
          // Limpando form
-    document.getElementById('contactForm').reset();
+    document.getElementById(forms).reset();
            }
 
 
@@ -58,17 +72,65 @@ let tipo = classificaTipo(email);
 saveuser(nome,email,date,tipo)
 e.preventDefault();
 console.log(e);
-
-   
-
 })
-
-
-     
+    
 });
-
-
 });
+}    
+
+function downloadDados(forms, arq){
+let meuIP=getIp( function (meuIP) {
+
+window.addEventListener('load', function(){
+    let f = document.getElementById (forms) 
+
+
+     function saveuser(name,email,date,tipo){
+        
+
+         
+            
+        leadsRef.ref("leads").push().set({
+        
+        Nome:name, EMAIL:email, DATA:date, IP:meuIP, TIPO:tipo
+        
+        })
+
+
+        
+        .then(function(docRef) {
+            
+            if(alert('Salvo Com Sucesso')){
+            f.elements['nomeId'].value ="";
+             f.elements['emailId'].value ="";
+        }})
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
+         // Limpando form
+    document.getElementById(forms).reset();
+           }
+
+
+f.addEventListener('submit', function(e){
+let nome= f.elements['nomeId'].value 
+let email= f.elements['emailId'].value 
+let date = completeDate();
+let tipo = classificaTipo(email);
+saveuser(nome,email,date,tipo)
+e.preventDefault();
+console.log(e);
+})
+    
+f.addEventListener('submit', function(){
+window.location.href = arq;
+    e.preventDefault();
+console.log(e);
+}).delay(4000)
+    
+});
+});
+}  
 
 // DATA 
 function completeDate () {
@@ -80,13 +142,10 @@ function completeDate () {
     minute = "" + now.getMinutes(); if (minute.length == 1) { minute = "0" + minute; }
     second = "" + now.getSeconds(); if (second.length == 1) { second = "0" + second; }
     return year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
-  }
+  } 
 
-// -----------------TESTE 
-
-// Pegando o IP
-function getIp(callback)
-{
+// IP
+function getIp(callback){
     function response(s)
     {
         callback(window.userip);
@@ -120,10 +179,9 @@ function getIp(callback)
 }
 
 
-// ------------ tipo
+//TIPO
 
 classificaTipo = (email) => {
-
 let dominio = email.substring(email.indexOf("@") + 1, email.length);
 
 let listaConsumidor = [
